@@ -1,11 +1,10 @@
-export { default as FollowCursorDiv } from "./dynamic";
-export { default as Model } from "./model";
+export { default as FollowCursorDiv } from "./three/dynamic";
+export { default as Model } from "./three/model";
 export { default as Navbar } from "./navbar";
-export { default as WorkHistory } from "./workhistory";
-export { default as ProjectHistory } from "./projecthistory";
+export { default as WorkHistory } from "./experience/workhistory";
+export { default as ProjectHistory } from "./experience/projecthistory";
 export { default as Footer } from "./footer";
-export { default as Experience } from "./experience";
-export { default as About } from "./about";
+export { default as Experience } from "./experience/experience";
+export { default as About } from "./about/about";
 export { default as Home } from "./home";
 export { default as Loading } from "./loading";
-export { default as Spotify } from "./spotify";

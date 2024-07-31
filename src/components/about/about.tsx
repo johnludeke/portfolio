@@ -1,4 +1,6 @@
-import Spotify from "./spotify";
+import SpotifyNowPlaying from "../../spotify/SpotifyNowPlaying";
+import NowPlaying from "./nowplaying";
+import TopSongs from "./topsongs";
 
 const About = () => {
   return (
@@ -16,7 +18,8 @@ const About = () => {
           <h1 className="font-semibold">About</h1>
           <div className="w-[48px] h-0.5 bg-cBlack rounded-full mb-10" />
           <p>This is information that would be about me</p>
-          <Spotify />
+          <NowPlaying />
+          <TopSongs />
         </div>
       </div>
     </div>

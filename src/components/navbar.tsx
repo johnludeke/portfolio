@@ -1,4 +1,4 @@
-import Model from "./model";
+import Model from "./three/model";
 import { MouseEvent } from "react";
 
 interface NavbarProps {
