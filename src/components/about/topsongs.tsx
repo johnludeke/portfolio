@@ -9,6 +9,7 @@ interface Track {
 }
 
 const TopSongs = () => {
+  const [loading, setLoading] = useState(true);
   const [topSongs, setTopSongs] = useState<Track[]>([]);
 
   useEffect(() => {
@@ -18,18 +19,48 @@ const TopSongs = () => {
 
     getTopSongsItem(client_id, client_secret, refresh_token).then((tracks) => {
       setTopSongs(tracks);
+      setLoading(false);
     });
   }, []);
 
   return (
-    <div>
-      {topSongs.map((track) => (
-        <div key={track.title}>
-          <img src={track.albumImageUrl} alt={track.title} />
-          <a href={track.songUrl}>{track.title}</a>
-          <p>by {track.artist}</p>
-        </div>
-      ))}
+    <div className="text-cBlack">
+      {loading ? (
+        <div></div>
+      ) : (
+        <>
+          <div className="flex flex-col space-y-4">
+            {topSongs.map((track, index) => (
+              <div className="flex flex-row items-center space-x-4">
+                <div className="w-6 h-auto">
+                  <h1 className="font-semibold">{index + 1}.</h1>
+                </div>
+                <div
+                  className="h-16 flex flex-row p-[4px] border-[1px] border-cBlack rounded-[8px] w-96 items-center"
+                  key={track.title}
+                >
+                  <a
+                    className="h-full w-auto rounded-l-[4px]"
+                    href={track.songUrl}
+                  >
+                    <img
+                      className="h-full w-auto rounded-l-[4px]"
+                      src={track.albumImageUrl}
+                      alt={track.title}
+                    />
+                  </a>
+                  <div className="flex flex-col pl-2 w-80">
+                    <h1 className="font-semibold truncate">
+                      <a href={track.songUrl}>{track.title}</a>
+                    </h1>
+                    <h1 className="text-gray-500 truncate">{track.artist}</h1>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
     </div>
   );
 };

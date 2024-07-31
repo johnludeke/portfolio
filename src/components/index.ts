@@ -1,8 +1,4 @@
-export { default as FollowCursorDiv } from "./three/dynamic";
-export { default as Model } from "./three/model";
 export { default as Navbar } from "./navbar";
-export { default as WorkHistory } from "./experience/workhistory";
-export { default as ProjectHistory } from "./experience/projecthistory";
 export { default as Footer } from "./footer";
 export { default as Experience } from "./experience/experience";
 export { default as About } from "./about/about";

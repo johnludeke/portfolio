@@ -100,6 +100,7 @@ export async function getTopSongsItem(
   }
 
   const topSongs = await response.json();
+  console.log(topSongs)
   const tracks = topSongs.items.map((track) => ({
     title: track.name,
     artist: track.artists.map((artist) => artist.name).join(", "),

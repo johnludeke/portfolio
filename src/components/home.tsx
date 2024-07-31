@@ -57,7 +57,7 @@ const Home = ({ currentColor, cubeColors, randomArray }: HomeProps) => {
           .
         </p>
       </div>
-      <div className="absolute flex flex-col text-[256px] font-black text-cBlack opacity-5 leading-[190px] w-full overflow-hidden z-[-1] h-full">
+      <div className="absolute flex flex-col text-[256px] font-black text-cBlack opacity-5 leading-[190px] w-full overflow-hidden z-[-1] h-full justify-between">
         <Marquee direction={randomArray[0][1]} speed={randomArray[0][0]}>
           WEB DEV CSS PYTORCH UI/UX ENGINEERING FIGMA API TYPESCRIPT NEXT.JS
           FPGA ALGORITHMS C/C++ JAVA &nbsp;
