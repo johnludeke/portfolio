@@ -56,7 +56,7 @@ const Experience = () => {
       </div>
       <div
         ref={containerRef}
-        className="relative flex justify-center pb-12 min-h-[80vh] h-auto overflow-x-hidden overflow-y-scroll"
+        className="relative flex justify-center pb-12 h-[600px] overflow-x-hidden overflow-y-scroll"
       >
         <div
           className={`pt-4 pb-10 absolute w-full transition-transform duration-500 ${

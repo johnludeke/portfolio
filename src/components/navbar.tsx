@@ -7,17 +7,36 @@ interface NavbarProps {
 }
 
 const Navbar = ({ currentColor, setCurrentColor }: NavbarProps) => {
+  // const handleScroll = (
+  //   event: MouseEvent<HTMLAnchorElement>,
+  //   targetId: string
+  // ) => {
+  //   event.preventDefault();
+  //   const targetElement = document.getElementById(targetId);
+  //   if (targetElement) {
+  //     targetElement.scrollIntoView({
+  //       behavior: "smooth",
+  //       block: "end",
+  //       inline: "center",
+  //     });
+  //   }
+  // };
+
   const handleScroll = (
-    event: MouseEvent<HTMLAnchorElement>,
+    event: React.MouseEvent<HTMLAnchorElement>,
     targetId: string
   ) => {
     event.preventDefault();
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
-      targetElement.scrollIntoView({
+      const elementPosition =
+        targetElement.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition =
+        targetId !== "home" ? elementPosition - 60 : elementPosition;
+
+      window.scrollTo({
+        top: offsetPosition,
         behavior: "smooth",
-        block: "end",
-        inline: "center",
       });
     }
   };

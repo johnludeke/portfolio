@@ -48,12 +48,9 @@ const WorkHistory = () => {
         link={"https://www.fosternation.org"}
         image={"../images/fosternation.png"}
       >
-        Worked closely with the nonprofit client to design and build a donation
-        dashboard for foster youth. Connected AWS S3 bucket to the frontend,
-        enabling the dashboard to display images from donation requests. Built
-        out the main dashboard using Chakra UI and React, creating responsive
-        and performant navigation. Connected our app to our Mongo database with
-        routes for foster youth, gift requests, and donations.
+        Kind Space dashboard designed and implemented for non-profit Foster
+        Nation. Kind Space allows foster youth to request gifts, and for donors
+        to fulfill those requests.
       </Card>
       <Card
         company={"Hack4Impact"}
@@ -71,13 +68,10 @@ const WorkHistory = () => {
         link={"https://operationcode.org"}
         image={"../images/operationcode.png"}
       >
-        Developed job board for U.S. veterans to improve job placement and to
-        help analyze analytics for Operation Code. Engineered custom claims with
-        PostgreSQL to access and set client permissions using Supabase.
-        Practiced responsive web design using Tailwind CSS, creating
-        aesthetically pleasing and user-friendly sign-in pages. Implemented
-        responsive and reusable stepper component using TypeScript and Tailwind
-        for smoother navigation.
+        Custom job board for U.S. veterans to improve job placement and to help
+        analyze analytics for non-profit Operation Code. The app allows
+        companies to post job openings and for veterans entering tech to seek
+        them out.
       </Card>
       <Card
         company={"Flyer Enterprises"}
@@ -93,13 +87,10 @@ const WorkHistory = () => {
         link={"https://flyerenterprises.web.app/"}
         image={"../images/flyerenterprises.png"}
       >
-        Advanced online ordering feature, giving students access to campus
-        dining services for over 500 users w/ AngularJS. Secured API access by
-        creating JavaScript middleware that validated user authentication,
-        ensuring integrity. Designed and implemented TypeScript component that
-        selectively displayed open dining locations for ease-of-use.
-        Collaborated with a cross-functional team through Git, participating in
-        agile methodologies, and weekly sprints.
+        Mobile web application for the University of Dayton that allows users to
+        order food from a multitude of locations completely online. The app
+        handles the entire flow, both for the user placing the order and for the
+        worker receiving the order.
       </Card>
     </div>
   );

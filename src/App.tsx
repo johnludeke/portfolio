@@ -50,16 +50,10 @@ const App = () => {
           randomArray={randomArray}
         />
       </section>
-      <section
-        id="work"
-        className="h-navbar-screen border-t-[1px] border-cBlack"
-      >
+      <section id="work" className="h-[750px] border-t-[1px] border-cBlack">
         <Experience />
       </section>
-      <section
-        id="about"
-        className="h-navbar-screen border-t-[1px] border-cBlack"
-      >
+      <section id="about" className="h-auto border-t-[1px] border-cBlack">
         <About />
       </section>
       <section id="contact" className="bg-cBlack h-44">

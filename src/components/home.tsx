@@ -72,7 +72,7 @@ const Home = ({ currentColor, cubeColors, randomArray }: HomeProps) => {
         </Marquee>
         <Marquee direction={randomArray[3][1]} speed={randomArray[3][0]}>
           FPGA ALGORITHMS SQL C/C++ REACT EXPRESS JAVA JAVASCRIPT PYTHON HTML
-          TENSORFLOW WEB-DEV DESIGN CSS PYTORCH &nbsp;
+          TENSORFLOW WEB DEV DESIGN CSS PYTORCH &nbsp;
         </Marquee>
         <Marquee direction={randomArray[4][1]} speed={randomArray[4][0]}>
           JAVASCRIPT PYTHON HTML TENSORFLOW WEB DEV DESIGN CSS REACT EXPRESS GIT

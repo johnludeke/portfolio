@@ -28,9 +28,6 @@ module.exports = {
         'box-shadow': '-5px 5px 0 0 black',
         'inner-shadow': 'inset 0 -2px 4px 0 rgba(0, 0, 0, 0.06)',
       },
-      height: {
-        'navbar-screen': 'calc(100vh - 61px)',
-      },
     },
   },
   plugins: [],
