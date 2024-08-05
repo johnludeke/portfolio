@@ -14,8 +14,8 @@ const ProjectHistory = () => {
           ["../symbols/TypeScript.png", "TypeScript"],
           ["../symbols/Nodejs.png", "Node.js"],
         ]}
-        link={"None"}
-        image={"None"}
+        link={"https://github.com/johnludeke/portfolio"}
+        image={"GitHub"}
       >
         Create a technical product from start to finish for a non-profit while
         managing a team of developers and designers.
@@ -25,8 +25,8 @@ const ProjectHistory = () => {
         title={"Trivialert"}
         dates={"February 2024"}
         stack={[["../symbols/Python.png", "Python"]]}
-        link={"None"}
-        image={"None"}
+        link={"https://github.com/johnludeke/trivialert"}
+        image={"GitHub"}
       >
         Create a technical product from start to finish for a non-profit while
         managing a team of developers and designers.
@@ -40,8 +40,8 @@ const ProjectHistory = () => {
           ["../symbols/JavaScript.png", "JavaScript"],
           ["../symbols/Nodejs.png", "Node.js"],
         ]}
-        link={"None"}
-        image={"None"}
+        link={"https://github.com/johnludeke/spotistat"}
+        image={"GitHub"}
       >
         Create a technical product from start to finish for a non-profit while
         managing a team of developers and designers.

@@ -2,6 +2,7 @@ import FollowCursorDiv from "./three/dynamic";
 import Model from "./three/model";
 import Marquee from "react-fast-marquee";
 import { MouseEvent } from "react";
+import MediaQuery from "react-responsive";
 
 type Direction = "left" | "right" | "up" | "down" | undefined;
 
@@ -30,10 +31,10 @@ const Home = ({ currentColor, cubeColors, randomArray }: HomeProps) => {
   return (
     <div className="flex flex-col h-screen">
       <div className="flex flex-row h-full justify-center">
-        <h1 className="flex items-center text-5xl md:text-7xl text-cBlack">
+        <h1 className="flex items-center text-5xl lg:text-7xl sm:pl-0 pl-8 text-cBlack">
           John Ludeke
         </h1>
-        <FollowCursorDiv>
+        <MediaQuery query="(max-device-width: 1023px)">
           <Model
             model={"./models/Cube.obj"}
             color={cubeColors[currentColor]}
@@ -42,10 +43,22 @@ const Home = ({ currentColor, cubeColors, randomArray }: HomeProps) => {
             transmittance={"./textures/Cube_transmittance.png"}
             scale={1}
           />
-        </FollowCursorDiv>
+        </MediaQuery>
+        <MediaQuery query="(min-device-width: 1024px)">
+          <FollowCursorDiv>
+            <Model
+              model={"./models/Cube.obj"}
+              color={cubeColors[currentColor]}
+              metallic={"./textures/Cube_metallic.png"}
+              roughness={"./textures/Cube_roughness.png"}
+              transmittance={"./textures/Cube_transmittance.png"}
+              scale={1}
+            />
+          </FollowCursorDiv>
+        </MediaQuery>
       </div>
       <div className="flex justify-center">
-        <p className="font-sourcecodepro absolute bottom-[35vh] text-cBlack">
+        <p className="text-center sm:px-0 px-12 font-sourcecodepro absolute bottom-[35vh] text-cBlack">
           Hey there, I'm an engineer. See my{" "}
           <a
             className="underline-offset-4 underline"

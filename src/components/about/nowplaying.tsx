@@ -59,12 +59,14 @@ const NowPlaying = () => {
                 <div className="w-[12px] h-[3px] translate-y-[4px] bg-[#1ED760] rounded-full" />
               )}
             </div>
-            <div className="h-16 w-96 border-[1px] border-cBlack rounded-[8px] items-center flex flex-row p-[4px]">
+            <div className="h-16 w-60 sm:w-96 border-[1px] border-cBlack rounded-[8px] items-center flex flex-row p-[4px]">
               {result.isPlaying ? (
                 <>
                   <a
                     className="h-full w-auto rounded-l-[4px]"
                     href={result.songUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <img
                       className="h-full w-auto rounded-l-[4px]"
@@ -72,9 +74,15 @@ const NowPlaying = () => {
                       alt={result.title}
                     />
                   </a>
-                  <div className="flex flex-col pl-2 w-80">
+                  <div className="flex flex-col pl-2 w-44 sm:w-80">
                     <h1 className="font-semibold truncate">
-                      <a href={result.songUrl}>{result.title}</a>
+                      <a
+                        href={result.songUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {result.title}
+                      </a>
                     </h1>
                     <h1 className="text-gray-500 truncate">{result.artist}</h1>
                   </div>

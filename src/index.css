@@ -9,3 +9,10 @@
 body {
   font-family: 'Work Sans', sans-serif;
 }
+
+@layer components {
+  .bg-blur {
+    @apply bg-white bg-opacity-50;
+    backdrop-filter: blur(5px);
+  }
+}

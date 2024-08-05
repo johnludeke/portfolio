@@ -4,7 +4,7 @@ import { AcademicCapIcon, MapPinIcon } from "@heroicons/react/24/outline";
 const About = () => {
   return (
     <div className="flex flex-col h-auto">
-      <div className="xl:px-40 px-10 flex flex-row h-auto">
+      <div className="xl:px-40 px-5 sm:px-10 md:px-28 flex flex-row h-auto">
         <div className="border-cBlack border-l-[1px] border-r-[1px] h-auto lg:flex hidden">
           <img
             className="w-80 h-auto self-center pb-20"
@@ -13,7 +13,7 @@ const About = () => {
             loading="lazy"
           />
         </div>
-        <div className="w-full flex flex-col lg:pl-20 pl-10 pr-10">
+        <div className="w-full flex flex-col lg:pl-20 sm:pl-10 sm:pr-10 pl-0 pr-0">
           <div className="pt-10 pb-6 w-full flex flex-col items-center">
             <h1 className="font-semibold">About</h1>
             <div className="w-[48px] h-0.5 bg-cBlack rounded-full" />

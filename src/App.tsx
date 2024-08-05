@@ -56,7 +56,7 @@ const App = () => {
       <section id="about" className="h-auto border-t-[1px] border-cBlack">
         <About />
       </section>
-      <section id="contact" className="bg-cBlack h-44">
+      <section id="contact" className="bg-cBlack sm:h-44 h-60">
         <Footer />
       </section>
     </div>
