@@ -13,15 +13,23 @@ const TopSongs = () => {
   const [topSongs, setTopSongs] = useState<Track[]>([]);
 
   useEffect(() => {
-    const client_id = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
-    const client_secret = process.env.REACT_APP_SPOTIFY_CLIENT_SECRET;
-    const refresh_token = process.env.REACT_APP_SPOTIFY_REFRESH_TOKEN;
-
-    getTopSongsItem(client_id, client_secret, refresh_token).then((tracks) => {
+    getTopSongsItem().then((tracks) => {
       setTopSongs(tracks);
       setLoading(false);
     });
   }, []);
+
+  // JAVASCRIPT IMPLEMENTATION
+  // useEffect(() => {
+  //   const client_id = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
+  //   const client_secret = process.env.REACT_APP_SPOTIFY_CLIENT_SECRET;
+  //   const refresh_token = process.env.REACT_APP_SPOTIFY_REFRESH_TOKEN;
+
+  //   getTopSongsItem(client_id, client_secret, refresh_token).then((tracks) => {
+  //     setTopSongs(tracks);
+  //     setLoading(false);
+  //   });
+  // }, []);
 
   return (
     <div className="text-cBlack">

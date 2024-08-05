@@ -16,13 +16,7 @@ const NowPlaying = () => {
 
   useEffect(() => {
     const intervalId = setInterval(async () => {
-      const client_id = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
-      const client_secret = process.env.REACT_APP_SPOTIFY_CLIENT_SECRET;
-      const refresh_token = process.env.REACT_APP_SPOTIFY_REFRESH_TOKEN;
-
-      Promise.all([
-        getNowPlayingItem(client_id, client_secret, refresh_token),
-      ]).then((results) => {
+      Promise.all([getNowPlayingItem()]).then((results) => {
         setResult(results[0]);
         setLoading(false);
       });
@@ -31,6 +25,25 @@ const NowPlaying = () => {
       clearInterval(intervalId);
     };
   });
+
+  // JAVASCRIPT IMPLEMENTATION
+  // useEffect(() => {
+  //   const intervalId = setInterval(async () => {
+  //     const client_id = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
+  //     const client_secret = process.env.REACT_APP_SPOTIFY_CLIENT_SECRET;
+  //     const refresh_token = process.env.REACT_APP_SPOTIFY_REFRESH_TOKEN;
+
+  //     Promise.all([
+  //       getNowPlayingItem(client_id, client_secret, refresh_token),
+  //     ]).then((results) => {
+  //       setResult(results[0]);
+  //       setLoading(false);
+  //     });
+  //   }, 1000);
+  //   return () => {
+  //     clearInterval(intervalId);
+  //   };
+  // });
 
   return (
     <div className="text-cBlack">
