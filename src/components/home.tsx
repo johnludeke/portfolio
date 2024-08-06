@@ -7,12 +7,12 @@ import MediaQuery from "react-responsive";
 type Direction = "left" | "right" | "up" | "down" | undefined;
 
 interface HomeProps {
-  currentColor: number;
+  darkMode: number;
   cubeColors: string[];
   randomArray: [number, Direction][];
 }
 
-const Home = ({ currentColor, cubeColors, randomArray }: HomeProps) => {
+const Home = ({ darkMode, cubeColors, randomArray }: HomeProps) => {
   const handleScroll = (
     event: MouseEvent<HTMLAnchorElement>,
     targetId: string
@@ -30,14 +30,14 @@ const Home = ({ currentColor, cubeColors, randomArray }: HomeProps) => {
 
   return (
     <div className="flex flex-col h-screen">
-      <div className="flex flex-row h-full justify-center">
-        <h1 className="flex items-center text-5xl lg:text-7xl sm:pl-0 pl-8 text-cBlack">
+      <div className="flex flex-row h-full justify-center z-[2]">
+        <h1 className="flex items-center text-5xl lg:text-7xl sm:pl-0 pl-8 text-cBlack dark:text-white">
           John Ludeke
         </h1>
         <MediaQuery query="(max-device-width: 1023px)">
           <Model
             model={"./models/Cube.obj"}
-            color={cubeColors[currentColor]}
+            color={cubeColors[darkMode]}
             metallic={"./textures/Cube_metallic.png"}
             roughness={"./textures/Cube_roughness.png"}
             transmittance={"./textures/Cube_transmittance.png"}
@@ -48,7 +48,7 @@ const Home = ({ currentColor, cubeColors, randomArray }: HomeProps) => {
           <FollowCursorDiv>
             <Model
               model={"./models/Cube.obj"}
-              color={cubeColors[currentColor]}
+              color={cubeColors[darkMode]}
               metallic={"./textures/Cube_metallic.png"}
               roughness={"./textures/Cube_roughness.png"}
               transmittance={"./textures/Cube_transmittance.png"}
@@ -57,8 +57,8 @@ const Home = ({ currentColor, cubeColors, randomArray }: HomeProps) => {
           </FollowCursorDiv>
         </MediaQuery>
       </div>
-      <div className="flex justify-center">
-        <p className="text-center sm:px-0 px-12 font-sourcecodepro absolute bottom-[35vh] text-cBlack">
+      <div className="flex justify-center z-[2]">
+        <p className="text-center sm:px-0 px-12 font-sourcecodepro absolute bottom-[35vh] text-cBlack dark:text-white">
           Hey there, I'm an engineer. See my{" "}
           <a
             className="underline-offset-4 underline"
@@ -70,7 +70,7 @@ const Home = ({ currentColor, cubeColors, randomArray }: HomeProps) => {
           .
         </p>
       </div>
-      <div className="absolute flex flex-col text-[256px] font-black text-cBlack opacity-5 leading-[190px] w-full overflow-hidden z-[-1] h-full justify-between">
+      <div className="absolute flex flex-col text-[256px] font-black text-cBlack dark:text-white opacity-5 leading-[190px] w-full overflow-hidden h-full justify-between">
         <Marquee direction={randomArray[0][1]} speed={randomArray[0][0]}>
           WEB DEV CSS PYTORCH UI/UX ENGINEERING FIGMA API TYPESCRIPT NEXT.JS
           FPGA ALGORITHMS C/C++ JAVA &nbsp;

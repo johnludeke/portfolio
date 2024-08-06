@@ -29,7 +29,9 @@ const Experience = () => {
         <button onClick={handlePrevPage}>
           <h1
             className={`transition-all duration-500 ${
-              page === 0 ? "text-cBlack" : "text-gray-500"
+              page === 0
+                ? "text-cBlack dark:text-white"
+                : "text-gray-500 dark:text-gray-400"
             }`}
           >
             Work
@@ -38,7 +40,9 @@ const Experience = () => {
         <button onClick={handleNextPage}>
           <h1
             className={`transition-all duration-500 ${
-              page === 1 ? "text-cBlack" : "text-gray-500"
+              page === 1
+                ? "text-cBlack dark:text-white"
+                : "text-gray-500 dark:text-gray-400"
             }`}
           >
             Projects
@@ -47,7 +51,7 @@ const Experience = () => {
       </div>
       <div className="flex flex-col w-full items-center">
         <div
-          className={`h-0.5 bg-cBlack rounded-full mt-[-40px] transition-all duration-300 ${
+          className={`h-0.5 bg-cBlack dark:bg-white rounded-full mt-[-40px] transition-all duration-300 ${
             page === 0
               ? "-translate-x-[52px] w-[40px]"
               : "translate-x-[40px] w-[65px]"

@@ -46,7 +46,7 @@ const NowPlaying = () => {
   // });
 
   return (
-    <div className="text-cBlack">
+    <div className="text-cBlack dark:text-white">
       {loading ? (
         <div></div>
       ) : (
@@ -59,7 +59,7 @@ const NowPlaying = () => {
                 <div className="w-[12px] h-[3px] translate-y-[4px] bg-[#1ED760] rounded-full" />
               )}
             </div>
-            <div className="h-16 w-60 sm:w-96 border-[1px] border-cBlack rounded-[8px] items-center flex flex-row p-[4px]">
+            <div className="h-16 w-60 sm:w-96 border-[1px] border-cBlack dark:border-white rounded-[8px] items-center flex flex-row p-[4px]">
               {result.isPlaying ? (
                 <>
                   <a
@@ -74,7 +74,7 @@ const NowPlaying = () => {
                       alt={result.title}
                     />
                   </a>
-                  <div className="flex flex-col pl-2 w-44 sm:w-80">
+                  <div className="flex flex-col pl-2 w-44 sm:w-80 text-sm sm:text-base">
                     <h1 className="font-semibold truncate">
                       <a
                         href={result.songUrl}
@@ -84,13 +84,17 @@ const NowPlaying = () => {
                         {result.title}
                       </a>
                     </h1>
-                    <h1 className="text-gray-500 truncate">{result.artist}</h1>
+                    <h1 className="text-gray-500 dark:text-gray-400 truncate">
+                      {result.artist}
+                    </h1>
                   </div>
                 </>
               ) : (
-                <div className="w-full flex flex-col items-center">
+                <div className="w-full flex flex-col items-center text-sm sm:text-base">
                   <h1 className="font-semibold">Currently offline...</h1>
-                  <h1 className="text-gray-500">Check back later.</h1>
+                  <h1 className="text-gray-500 dark:text-gray-400">
+                    Check back later.
+                  </h1>
                 </div>
               )}
             </div>

@@ -17,8 +17,9 @@ const ProjectHistory = () => {
         link={"https://github.com/johnludeke/portfolio"}
         image={"GitHub"}
       >
-        Create a technical product from start to finish for a non-profit while
-        managing a team of developers and designers.
+        Fully custom and handmade portfolio website. UX/UI completely designed
+        by me, along with the development and implementation. Features Spotify
+        connectivity inspired by previous project.
       </Card>
       <Card
         company={""}
@@ -28,8 +29,8 @@ const ProjectHistory = () => {
         link={"https://github.com/johnludeke/trivialert"}
         image={"GitHub"}
       >
-        Create a technical product from start to finish for a non-profit while
-        managing a team of developers and designers.
+        Python script that reads Reddit's API for updates about local trivia to
+        then gets posted in a specified channel on Slack.
       </Card>
       <Card
         company={""}
@@ -43,8 +44,9 @@ const ProjectHistory = () => {
         link={"https://github.com/johnludeke/spotistat"}
         image={"GitHub"}
       >
-        Create a technical product from start to finish for a non-profit while
-        managing a team of developers and designers.
+        First project ever in React. Custom API that reads from Spotify's Web
+        API and then displays the top artists and songs of any user who logs in.
+        Introduction to authorization and Express.
       </Card>
     </div>
   );

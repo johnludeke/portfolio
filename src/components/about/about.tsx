@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div className="flex flex-col h-auto">
       <div className="xl:px-40 px-5 sm:px-10 md:px-28 flex flex-row h-auto">
-        <div className="border-cBlack border-l-[1px] border-r-[1px] h-auto lg:flex hidden">
+        <div className="border-cBlack dark:border-white border-l-[1px] border-r-[1px] h-auto lg:flex hidden">
           <img
             className="w-80 h-auto self-center pb-20"
             src="./images/headshot.png"
@@ -16,7 +16,7 @@ const About = () => {
         <div className="w-full flex flex-col lg:pl-20 sm:pl-10 sm:pr-10 pl-0 pr-0">
           <div className="pt-10 pb-6 w-full flex flex-col items-center">
             <h1 className="font-semibold">About</h1>
-            <div className="w-[48px] h-0.5 bg-cBlack rounded-full" />
+            <div className="w-[48px] h-0.5 bg-cBlack dark:bg-white rounded-full" />
           </div>
           <img
             className="object-cover h-60 w-full self-center pb-6 lg:hidden"
@@ -26,13 +26,13 @@ const About = () => {
           />
           <div className="flex flex-row justify-center space-x-10 pb-6">
             <div className="flex flex-row items-center">
-              <AcademicCapIcon className="h-4 stroke-[2px] pr-1" />
+              <AcademicCapIcon className="h-4 stroke-[2px] stroke-cBlack dark:stroke-white pr-1" />
               <h1 className="hover:underline underline-offset-4 font-semibold">
                 <a href="https://illinois.edu">UIUC</a>
               </h1>
             </div>
             <div className="flex flex-row items-center">
-              <MapPinIcon className="h-4 stroke-[2px] pr-1" />
+              <MapPinIcon className="h-4 stroke-[2px] stroke-cBlack dark:stroke-white pr-1" />
               <h1 className="font-semibold">Chicago, IL</h1>
             </div>
           </div>

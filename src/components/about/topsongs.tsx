@@ -32,7 +32,7 @@ const TopSongs = () => {
   // }, []);
 
   return (
-    <div className="text-cBlack">
+    <div className="text-cBlack dark:text-white">
       {loading ? (
         <div></div>
       ) : (
@@ -44,7 +44,7 @@ const TopSongs = () => {
                   <h1 className="font-semibold">{index + 1}.</h1>
                 </div>
                 <div
-                  className="h-16 flex flex-row p-[4px] border-[1px] border-cBlack rounded-[8px] w-60 sm:w-96 items-center"
+                  className="h-16 flex flex-row p-[4px] border-[1px] border-cBlack dark:border-white rounded-[8px] w-60 sm:w-96 items-center"
                   key={track.title}
                 >
                   <a
@@ -59,7 +59,7 @@ const TopSongs = () => {
                       alt={track.title}
                     />
                   </a>
-                  <div className="flex flex-col pl-2 w-44 sm:w-80">
+                  <div className="flex flex-col pl-2 w-44 sm:w-80 text-sm sm:text-base">
                     <h1 className="font-semibold truncate">
                       <a
                         href={track.songUrl}
@@ -69,7 +69,9 @@ const TopSongs = () => {
                         {track.title}
                       </a>
                     </h1>
-                    <h1 className="text-gray-500 truncate">{track.artist}</h1>
+                    <h1 className="text-gray-500 dark:text-gray-400 truncate">
+                      {track.artist}
+                    </h1>
                   </div>
                 </div>
               </div>

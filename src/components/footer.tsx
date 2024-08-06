@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <div className="h-full w-full flex flex-col sm:py-0 py-4">
-      <div className="flex flex-col sm:flex-row text-white w-full justify-evenly sm:justify-between px-[10vw] h-full items-center">
+      <div className="flex flex-col sm:flex-row text-white  w-full justify-evenly sm:justify-between px-[10vw] h-full items-center">
         <h1 className="font-semibold text-xl">John Ludeke</h1>
         <div className="flex flex-col space-y-4">
           <h1 className="font-sourcecodepro group">
@@ -16,7 +16,7 @@ const Footer = () => {
               />
               <h1>GitHub</h1>
             </a>
-            <div className="block h-0.5 group-hover:bg-white group-hover:translate-y-0 bg-cBlack translate-y-1 rounded-full w-[82px] transition-all duration-100" />
+            <div className="block h-0.5 group-hover:bg-white  group-hover:translate-y-0 bg-cBlack  translate-y-1 rounded-full w-[82px] transition-all duration-100" />
           </h1>
           <h1 className="font-sourcecodepro group">
             <a
@@ -30,7 +30,7 @@ const Footer = () => {
               />
               <h1>LinkedIn</h1>
             </a>
-            <div className="block h-0.5 group-hover:bg-white group-hover:translate-y-0 bg-cBlack translate-y-1 rounded-full w-[101px] transition-all duration-100" />
+            <div className="block h-0.5 group-hover:bg-white  group-hover:translate-y-0 bg-cBlack  translate-y-1 rounded-full w-[101px] transition-all duration-100" />
           </h1>
         </div>
       </div>

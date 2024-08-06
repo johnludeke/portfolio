@@ -4,11 +4,11 @@ import { useState, useEffect } from "react";
 import MediaQuery from "react-responsive";
 
 interface NavbarProps {
-  currentColor: number;
-  setCurrentColor: React.Dispatch<React.SetStateAction<number>>;
+  darkMode: number;
+  setDarkMode: React.Dispatch<React.SetStateAction<number>>;
 }
 
-const Navbar = ({ currentColor, setCurrentColor }: NavbarProps) => {
+const Navbar = ({ darkMode, setDarkMode }: NavbarProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [shouldRender, setShouldRender] = useState(false);
 
@@ -46,22 +46,20 @@ const Navbar = ({ currentColor, setCurrentColor }: NavbarProps) => {
 
   const donutColors = [
     "./textures/Donut_color_black.png",
-    "./textures/Donut_color_pink.png",
-    "./textures/Donut_color_green.png",
-    "./textures/Donut_color_blue.png",
+    "./textures/Donut_color_white.png",
   ];
 
   const handleClick = () => {
-    setCurrentColor(currentColor === 3 ? 0 : currentColor + 1);
+    setDarkMode(Math.abs(darkMode - 1));
   };
 
   return (
-    <nav className="fixed top-0 h-[62px] left-0 w-full bg-white text-cBlack border-b-[1px] border-cBlack z-30">
+    <nav className="fixed top-0 h-[62px] left-0 w-full bg-white dark:bg-cBlack text-cBlack dark:text-white border-b-[1px] border-cBlack dark:border-white z-30">
       <div className="px-3 sm:px-12 flex justify-between items-center">
         <div className="w-[60px] h-[60px] cursor-pointer" onClick={handleClick}>
           <Model
             model={"./models/Donut.obj"}
-            color={donutColors[currentColor]}
+            color={donutColors[darkMode]}
             metallic={"./textures/Donut_metallic.png"}
             roughness={"./textures/Donut_roughness.png"}
             transmittance={"./textures/Donut_transmittance.png"}
@@ -72,12 +70,12 @@ const Navbar = ({ currentColor, setCurrentColor }: NavbarProps) => {
           <Hamburger toggled={isOpen} toggle={setIsOpen} />
           {shouldRender && (
             <div
-              className={`absolute top-[62px] left-0 w-full border-b-[1px] border-cBlack bg-[rgba(255,255,255,0.5)] bg-blur overflow-hidden ${
+              className={`absolute top-[62px] left-0 w-full border-b-[1px] border-cBlack dark:border-white bg-[rgba(255,255,255,0.5)] dark:[rgba(29,30,32,0.5)] bg-blur overflow-hidden ${
                 isOpen ? "animate-expand" : "animate-collapse"
               }`}
               onAnimationEnd={handleAnimationEnd}
             >
-              <div className="flex flex-col items-center space-y-4 py-4 text-cBlack">
+              <div className="flex flex-col items-center space-y-4 py-4 text-cBlack dark:text-white">
                 <a
                   href="#home"
                   onClick={(e) => handleScroll(e, "home")}
@@ -111,32 +109,32 @@ const Navbar = ({ currentColor, setCurrentColor }: NavbarProps) => {
           )}
         </MediaQuery>
         <MediaQuery query="(min-device-width: 1024px)">
-          <div className="flex flex-row space-x-[5vw] text-cBlack">
+          <div className="flex flex-row space-x-[5vw] text-cBlack dark:text-white">
             <a
               href="#home"
               onClick={(e) => handleScroll(e, "home")}
-              className="hover:-translate-y-0.5 hover:text-gray-500 transition duration-300 px-4"
+              className="hover:-translate-y-0.5 hover:text-gray-500 dark:hover:text-gray-400 transition duration-300 px-4"
             >
               Home
             </a>
             <a
               href="#work"
               onClick={(e) => handleScroll(e, "work")}
-              className="hover:-translate-y-0.5 hover:text-gray-500 transition duration-300 px-4"
+              className="hover:-translate-y-0.5 hover:text-gray-500 dark:hover:text-gray-400 transition duration-300 px-4"
             >
               Work
             </a>
             <a
               href="#about"
               onClick={(e) => handleScroll(e, "about")}
-              className="hover:-translate-y-0.5 hover:text-gray-500 transition duration-300 px-4"
+              className="hover:-translate-y-0.5 hover:text-gray-500 dark:hover:text-gray-400 transition duration-300 px-4"
             >
               About
             </a>
             <a
               href="#contact"
               onClick={(e) => handleScroll(e, "contact")}
-              className="hover:-translate-y-0.5 hover:text-gray-500 transition duration-300 px-4"
+              className="hover:-translate-y-0.5 hover:text-gray-500 dark:hover:text-gray-400 transition duration-300 px-4"
             >
               Contact
             </a>

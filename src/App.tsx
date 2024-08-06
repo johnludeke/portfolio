@@ -1,17 +1,29 @@
 import "./App.css";
 import { Navbar, Footer, Experience, About, Home, Loading } from "./components";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 type Direction = "left" | "right" | "up" | "down" | undefined;
 
 const App = () => {
-  const [currentColor, setCurrentColor] = useState(0);
+  const prefersDarkMode = window.matchMedia(
+    "(prefers-color-scheme: dark)"
+  ).matches;
+
+  const [darkMode, setDarkMode] = useState<number>(prefersDarkMode ? 1 : 0);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const handleChange = (e: MediaQueryListEvent) =>
+      setDarkMode(e.matches ? 1 : 0);
+
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, []);
 
   const cubeColors = [
     "./textures/Cube_color_black.png",
-    "./textures/Cube_color_pink.png",
-    "./textures/Cube_color_green.png",
-    "./textures/Cube_color_blue.png",
+    "./textures/Cube_color_white.png",
   ];
 
   const getRandomNumber = (a: number, b: number): number => {
@@ -40,23 +52,36 @@ const App = () => {
   const randomArray: [number, Direction][] = generateRandomArray(5, a, b);
 
   return (
-    <div className="text-cBlack">
+    <div
+      className={
+        darkMode === 1 ? "dark bg-cBlack text-white" : "bg-white text-cBlack"
+      }
+    >
       <Loading />
-      <Navbar currentColor={currentColor} setCurrentColor={setCurrentColor} />
+      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <section id="home" className="h-screen">
         <Home
-          currentColor={currentColor}
+          darkMode={darkMode}
           cubeColors={cubeColors}
           randomArray={randomArray}
         />
       </section>
-      <section id="work" className="h-[750px] border-t-[1px] border-cBlack">
+      <section
+        id="work"
+        className="h-[750px] border-t-[1px] border-cBlack dark:border-white"
+      >
         <Experience />
       </section>
-      <section id="about" className="h-auto border-t-[1px] border-cBlack">
+      <section
+        id="about"
+        className="h-auto border-t-[1px] border-cBlack dark:border-white"
+      >
         <About />
       </section>
-      <section id="contact" className="bg-cBlack sm:h-44 h-60">
+      <section
+        id="contact"
+        className="bg-cBlack dark:border-t-[1px] dark:border-white sm:h-44 h-60"
+      >
         <Footer />
       </section>
     </div>
