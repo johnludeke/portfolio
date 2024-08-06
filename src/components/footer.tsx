@@ -4,7 +4,10 @@ const Footer = () => {
   return (
     <div className="h-full w-full flex flex-col sm:py-0 py-2">
       <div className="flex flex-col sm:flex-row text-white  w-full justify-evenly sm:justify-between px-[10vw] h-full items-center">
-        <h1 className="font-semibold text-xl">John Ludeke</h1>
+        <h1 className="font-semibold text-xl flex flex-row">
+          <h1>John Ludeke </h1>
+          <h1 className="text-gray-400">v1.0</h1>
+        </h1>
         <div className="flex flex-col space-y-4">
           <h1 className="font-sourcecodepro group">
             <a
@@ -47,8 +50,8 @@ const Footer = () => {
         </div>
       </div>
       <div className="w-full pb-2 px-[20vw]">
-        <h1 className="flex w-full text-white justify-center text-center">
-          last updated august 2024, designed and developed by hand
+        <h1 className="flex w-full text-white justify-center text-center sm:mt-[-20px] lg:mt-[-40px]">
+          Last updated august 2024, designed and developed by hand.
         </h1>
       </div>
     </div>
