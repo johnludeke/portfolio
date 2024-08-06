@@ -28,7 +28,6 @@ module.exports = {
       boxShadow: {
         'box-shadow': '-5px 5px 0 0 #1D1E20',
         'box-shadow-white': '-5px 5px 0 0 white',
-        'inner-shadow': 'inset 0 -2px 4px 0 rgba(0, 0, 0, 0.06)',
       },
       keyframes: {
         expand: {

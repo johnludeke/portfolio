@@ -80,7 +80,7 @@ const App = () => {
       </section>
       <section
         id="contact"
-        className="bg-cBlack dark:border-t-[1px] dark:border-white sm:h-44 h-60"
+        className="bg-cBlack dark:border-t-[1px] dark:border-white sm:h-52 h-72"
       >
         <Footer />
       </section>
