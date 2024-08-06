@@ -13,6 +13,8 @@ const Footer = () => {
             <a
               className="flex flex-row space-x-2"
               href="https://github.com/johnludeke"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
                 className="h-4 w-4 translate-y-[3px]"
@@ -27,6 +29,8 @@ const Footer = () => {
             <a
               className="flex flex-row space-x-2"
               href="https://www.linkedin.com/in/johnludeke/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
                 className="h-4 w-4 translate-y-[3px]"

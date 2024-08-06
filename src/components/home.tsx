@@ -14,16 +14,19 @@ interface HomeProps {
 
 const Home = ({ darkMode, cubeColors, randomArray }: HomeProps) => {
   const handleScroll = (
-    event: MouseEvent<HTMLAnchorElement>,
+    event: React.MouseEvent<HTMLAnchorElement>,
     targetId: string
   ) => {
     event.preventDefault();
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
-      targetElement.scrollIntoView({
+      const elementPosition =
+        targetElement.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - 60;
+
+      window.scrollTo({
+        top: offsetPosition,
         behavior: "smooth",
-        block: "end",
-        inline: "center",
       });
     }
   };
