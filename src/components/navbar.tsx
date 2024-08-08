@@ -70,7 +70,7 @@ const Navbar = ({ darkMode, setDarkMode }: NavbarProps) => {
           <Hamburger toggled={isOpen} toggle={setIsOpen} />
           {shouldRender && (
             <div
-              className={`absolute top-[62px] left-0 w-full border-b-[1px] border-cBlack dark:border-white bg-[rgba(255,255,255,0.5)] dark:[rgba(29,30,32,0.5)] bg-blur overflow-hidden ${
+              className={`absolute top-[62px] left-0 w-full border-b-[1px] border-cBlack dark:border-white bg-[rgba(255,255,255,0.5)] dark:bg-[rgba(29,30,32,0.5)] bg-blur overflow-hidden ${
                 isOpen ? "animate-expand" : "animate-collapse"
               }`}
               onAnimationEnd={handleAnimationEnd}

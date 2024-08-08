@@ -8,6 +8,7 @@ const ProjectHistory = () => {
         title={"Portfolio"}
         dates={"July 2024 - Present"}
         stack={[
+          ["../symbols/AWS.png", "AWS"],
           ["../symbols/Threejs.png", "Three.js"],
           ["../symbols/TailwindCSS.png", "TailwindCSS"],
           ["../symbols/React.png", "React"],
@@ -20,8 +21,8 @@ const ProjectHistory = () => {
         Fully custom and handmade portfolio website. UX/UI completely designed
         by me, along with the development and implementation. Features live
         Spotify connectivity inspired by previous project. The app is also fully
-        responsive, and works well for all display types. Deployed using an AWS
-        S3 bucket.
+        responsive, and works well for all display types. Deployed using AWS{" "}
+        {"Route 53, S3 Bucket, CloudFront"}.
       </Card>
       <Card
         company={""}
