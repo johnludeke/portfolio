@@ -23,8 +23,6 @@ const Card = ({
 }: CardProps) => {
   const [expanded, setExpanded] = useState(false);
 
-  const height = image === "None" || image === "GitHub" ? "100px" : "200px";
-
   const handleClick = () => {
     setExpanded(!expanded);
   };
@@ -67,26 +65,27 @@ const Card = ({
       </div>
       <div className="flex flex-col">
         <div
-          style={{ height: expanded ? height : "0", overflow: "scroll" }}
-          className={`transition-all duration-500 space-y-4 ${
+          className={`transition-all duration-500 overflow-hidden ${
+            expanded ? "max-h-[400px]" : "max-h-0"
+          } space-y-4 ${
             image !== "None" && image !== "GitHub"
               ? "flex flex-col lg:grid lg:grid-cols-[3fr_2fr] lg:gap-4"
               : "flex flex-col"
-          } `}
+          }`}
         >
           {image !== "None" && image !== "GitHub" ? (
             <>
-              <body className="pt-3">{children}</body>
+              <div className="pt-3">{children}</div>
               <a href={link} target="_blank" rel="noopener noreferrer">
                 <img
                   className="h-auto object-contain rounded-md border-cBlack dark:border-white border-[1px]"
                   src={image}
-                  alt={""}
+                  alt=""
                 />
               </a>
             </>
           ) : (
-            <body className="">{children}</body>
+            <div className="pt-3">{children}</div>
           )}
         </div>
         <div

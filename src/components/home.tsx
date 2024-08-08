@@ -61,7 +61,7 @@ const Home = ({ darkMode, cubeColors, randomArray }: HomeProps) => {
         </MediaQuery>
       </div>
       <div className="flex justify-center z-[2]">
-        <p className="text-center sm:px-0 px-12 font-sourcecodepro absolute bottom-[35vh] text-cBlack dark:text-white">
+        <p className="text-center sm:px-0 px-12 font-sourcecodepro absolute top-[60vh] md:top-auto bottom-full md:bottom-[35vh] text-cBlack dark:text-white">
           Hey there, I'm an engineer. See my{" "}
           <a
             className="underline-offset-4 underline"
@@ -73,7 +73,7 @@ const Home = ({ darkMode, cubeColors, randomArray }: HomeProps) => {
           .
         </p>
       </div>
-      <div className="absolute flex flex-col text-[256px] font-black text-cBlack dark:text-white opacity-5 leading-[190px] w-full overflow-hidden h-full justify-between">
+      <div className="absolute flex flex-col text-[256px] font-black text-cBlack dark:text-white opacity-5 leading-[190px] w-full overflow-hidden h-screen justify-between z-[1] bg-transparent">
         <Marquee direction={randomArray[0][1]} speed={randomArray[0][0]}>
           WEB DEV CSS PYTORCH UI/UX ENGINEERING FIGMA API TYPESCRIPT NEXT.JS
           FPGA ALGORITHMS C/C++ JAVA &nbsp;

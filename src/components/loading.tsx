@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { ClockLoader } from "react-spinners";
 
 const Loading = () => {
   const [fadeOut, setFadeOut] = useState(false);
@@ -13,13 +14,11 @@ const Loading = () => {
 
   return (
     <div
-      className={`fixed z-50 flex justify-center items-center inset-0 bg-cBlack transition-opacity duration-1000 ${
+      className={`fixed z-50 flex flex-col justify-center items-center inset-0 bg-cBlack transition-opacity duration-1000 ${
         fadeOut ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >
-      <h1 className="text-white font-semibold text-7xl font-sourcecodepro">
-        {"🧐"}
-      </h1>
+      <ClockLoader color="#FFFFFF" />
     </div>
   );
 };

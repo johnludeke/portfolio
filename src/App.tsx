@@ -68,7 +68,7 @@ const App = () => {
       </section>
       <section
         id="work"
-        className="h-[750px] border-t-[1px] border-cBlack dark:border-white"
+        className="border-t-[1px] border-cBlack dark:border-white"
       >
         <Experience />
       </section>

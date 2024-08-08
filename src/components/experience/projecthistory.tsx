@@ -18,8 +18,10 @@ const ProjectHistory = () => {
         image={"GitHub"}
       >
         Fully custom and handmade portfolio website. UX/UI completely designed
-        by me, along with the development and implementation. Features Spotify
-        connectivity inspired by previous project.
+        by me, along with the development and implementation. Features live
+        Spotify connectivity inspired by previous project. The app is also fully
+        responsive, and works well for all display types. Deployed using an AWS
+        S3 bucket.
       </Card>
       <Card
         company={""}
