@@ -22,7 +22,7 @@ const ProjectHistory = () => {
         by me, along with the development and implementation. Features live
         Spotify connectivity inspired by previous project. The app is also fully
         responsive, and works well for all display types. Deployed using AWS{" "}
-        {"Route 53, S3 Bucket, CloudFront"}.
+        {"(Route 53, S3 Bucket, CloudFront)"}.
       </Card>
       <Card
         company={""}

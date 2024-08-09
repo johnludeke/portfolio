@@ -48,7 +48,7 @@ const About = () => {
             </p>
             <p>
               In my free time, I like to play and watch soccer{" "}
-              {"(newly initiaed Liverpool fan)"}, read, workout, and crush my
+              {"(newly initiated Liverpool fan)"}, read, workout, and crush my
               friends in Mario Kart. Now that I'm in an apartment, I have also
               been broadening my cooking skills; almost everything includes a
               noodle, naturally.
