@@ -33,6 +33,7 @@ const Home = ({ darkMode, cubeColors, randomArray }: HomeProps) => {
 
   return (
     <div className="flex flex-col h-screen">
+      <div className="absolute translate-x-1/2 -translate-y-3">zeeb</div>
       <div className="flex flex-row h-full justify-center z-[2]">
         <h1 className="flex items-center text-5xl lg:text-7xl sm:pl-0 pl-8 text-cBlack dark:text-white">
           John Ludeke
