@@ -1,6 +1,6 @@
-# Trivialert
+# Portfolio
 ### Overview
-Trivialert is a simple Python script that posts to a specific Slack channel using Slack Bolt. The bot uses Reddit's PRAW API to listen for a specific Reddit user's most recent post, and then formats and sends the message to the appropriate Slack channel. I have been using this to post updates on a local pub's trivia, so that users of the Slack channel can know specific details about the trivia being hosted.
+This repository is the codebase of my personal portfolio, which hosts information you would normally find on a resume. It is intended to be both professional, but also have fun features (such as connectivity to Spotify, showing what I'm listening to live as well as my top songs). This was the first project that I deployed myself as well. My main focus was to keep things simple and focus on good design and implementation.
 
 ### Use
 This site was hosted using AWS at [johnludeke.com](https://johnludeke.com).
@@ -11,8 +11,7 @@ npm i
 npm start
 ```
 
-
 ### Future
-I don't have any more plans for this, besides to maybe clean it up and/or host the script somewhere. As of now, it just runs locally.
+I cannot see myself sticking with the same portfolio for more than a couple years, but for now I will likely make incremental changes. In addition, as my job / project history updates, so will the site.
 
 
