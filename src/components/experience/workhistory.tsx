@@ -4,9 +4,19 @@ const WorkHistory = () => {
   return (
     <div className="flex flex-col space-y-4 w-full items-center">
       <Card
+        company={"IMC Trading"}
+        title={"Incoming Software Engineer Intern"}
+        dates={"June 2025 - August 2025"}
+        stack={[]}
+        link={"None"}
+        image={"None"}
+      >
+        Proprietary trading and market making.
+      </Card>
+      <Card
         company={"Hack4Impact"}
-        title={"Incoming Product Manager"}
-        dates={"June 2024 - Present"}
+        title={"Product Manager"}
+        dates={"August 2024 - Present"}
         stack={[]}
         link={"None"}
         image={"None"}
@@ -16,7 +26,7 @@ const WorkHistory = () => {
       </Card>
       <Card
         company={"AbbVie"}
-        title={"Software Engineering Intern"}
+        title={"Software Engineer Intern"}
         dates={"May 2024 - Present"}
         stack={[
           ["../symbols/JavaScript.png", "JavaScript"],

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ClockLoader } from "react-spinners";
+import { PropagateLoader } from "react-spinners";
 
 const Loading = () => {
   const [fadeOut, setFadeOut] = useState(false);
@@ -18,7 +18,7 @@ const Loading = () => {
         fadeOut ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >
-      <ClockLoader color="#FFFFFF" />
+      <PropagateLoader color="#FFFFFF" />
     </div>
   );
 };
