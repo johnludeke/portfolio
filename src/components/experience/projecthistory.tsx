@@ -33,7 +33,7 @@ const ProjectHistory = () => {
         image={"GitHub"}
       >
         Python script that reads Reddit's API for updates about local trivia to
-        then gets posted in a specified channel on Slack.
+        then get posted in a specified channel on Slack.
       </Card>
       <Card
         company={""}

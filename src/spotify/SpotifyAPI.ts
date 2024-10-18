@@ -1,7 +1,7 @@
 import QueryString from "qs";
 import { Buffer } from "buffer";
 
-const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing`;
+const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing?additional_types=track,episode`;
 const TOP_SONGS_ENDPOINT = `https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=3`;
 const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
 
@@ -60,25 +60,47 @@ export const getTopSongs = async () => {
 };
 
 export default async function getNowPlayingItem() {
+  let albumImageUrl = "";
+  let artist = "";
+  let isPlaying = false;
+  let objUrl = "";
+  let title = "";
   const response = await getNowPlaying();
   if (response.status === 204 || response.status > 400) {
-    return false;
+    return {
+      albumImageUrl,
+      artist,
+      isPlaying,
+      objUrl,
+      title,
+    };
   }
 
-  const song = await response.json();
-  const albumImageUrl = song.item.album.images[0].url;
-  const artist = song.item.artists
-    .map((artist: { name: string }) => artist.name)
-    .join(", ");
-  const isPlaying = song.is_playing;
-  const songUrl = song.item.external_urls.spotify;
-  const title = song.item.name;
+  const obj = await response.json();
+
+  const type = obj.currently_playing_type;
+
+  if (type === "track") {
+    albumImageUrl = obj.item.album.images[0].url;
+    artist = obj.item.artists
+      .map((artist: { name: string }) => artist.name)
+      .join(", ");
+    isPlaying = obj.is_playing || false;
+    objUrl = obj.item.external_urls.spotify;
+    title = obj.item.name;
+  } else if (type === "episode") {
+    albumImageUrl = obj.item.show.images[0].url;
+    artist = obj.item.show.name;
+    isPlaying = obj.is_playing || false;
+    objUrl = obj.item.external_urls.spotify;
+    title = obj.item.name;
+  }
 
   return {
     albumImageUrl,
     artist,
     isPlaying,
-    songUrl,
+    objUrl,
     title,
   };
 }

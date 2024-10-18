@@ -1,7 +1,6 @@
 import FollowCursorDiv from "./three/dynamic";
 import Model from "./three/model";
 import Marquee from "react-fast-marquee";
-import { MouseEvent } from "react";
 import MediaQuery from "react-responsive";
 
 type Direction = "left" | "right" | "up" | "down" | undefined;
