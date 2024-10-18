@@ -55,7 +55,7 @@ const Footer = () => {
       </div>
       <div className="w-full pb-2 px-[20vw]">
         <h1 className="flex w-full text-white justify-center text-center sm:mt-[-20px] lg:mt-[-40px]">
-          Last updated September 2024, designed and developed by hand.
+          Last updated October 2024, designed and developed by hand.
         </h1>
       </div>
     </div>
